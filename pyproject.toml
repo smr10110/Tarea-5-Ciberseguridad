@@ -1,0 +1,12 @@
+[project]
+name = "tarea5-ciberseguridad"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "requests",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "jupyterlab",
+    "ipykernel",
+]
