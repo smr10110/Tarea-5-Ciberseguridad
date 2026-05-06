@@ -1,5 +1,6 @@
 import os
 import json
+import shutil
 import subprocess
 import requests
 
@@ -9,7 +10,7 @@ TOKEN     = ""          # opcional: pega tu GitHub token aquí
 BASE_DIR  = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPOS_DIR = os.path.join(BASE_DIR, "repos")
 OUT_DIR   = os.path.join(BASE_DIR, "resultados")
-GITLEAKS  = os.path.join(BASE_DIR, "gitleaks", "gitleaks.exe")
+GITLEAKS  = shutil.which("gitleaks") or os.path.join(BASE_DIR, "gitleaks", "gitleaks.exe")
 
 os.makedirs(REPOS_DIR, exist_ok=True)
 os.makedirs(OUT_DIR,   exist_ok=True)
