@@ -1,0 +1,4 @@
+.venv/
+repos/
+resultados/*
+!resultados/.gitkeep
